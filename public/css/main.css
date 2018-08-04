@@ -1,0 +1,49 @@
+
+
+/* Acceuil Style */
+.buttons-content{
+    background: #6081f0;
+    display: block;
+    height: 300px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.accueil-btn{
+    display: block;
+    float: left;
+    height: 33%;
+    margin: 0;
+    background: #0d3625;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.accueil-btn:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.full{
+    width: 100%;
+}
+.half{
+    width: 50%;
+}
+
+/* */
+
+.creation{
+    width: 600px;
+    margin: 20px auto;
+}
+
+.creation .tab-content{
+    margin-top: 30px;
+}
+
+.creation ul li:hover {
+    cursor: pointer ;
+}

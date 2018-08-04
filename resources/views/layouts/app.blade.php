@@ -12,6 +12,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
+
+    @yield('propre-css')
 </head>
 <body>
     <div id="app">
@@ -76,5 +80,21 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
+
+    @yield('propre-script')
+    <!-- pour afficher les msg de toastr -->
+    @if(Session::has('success'))
+        <script>
+            toastr.success("{{ Session::get('success') }}");
+        </script>
+    @endif
+
+    @if(Session::has('warning'))
+        <script>
+            toastr.warning("{{ Session::get('warning') }}");
+        </script>
+    @endif
 </body>
 </html>
