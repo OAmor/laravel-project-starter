@@ -24,12 +24,14 @@
     <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
-
     @yield('propre-css')
 
 </head>
 <body class="hold-transition skin-red sidebar-mini">
+@yield('set-active-list')
+
 <div class="wrapper">
+
 
     <header class="main-header">
         <!-- Logo -->
@@ -319,7 +321,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active treeview">
+                <li class="dashboard treeview">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                         <span class="pull-right-container">
@@ -327,11 +329,11 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                        <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                        <li class="route1"><a href="{{Route('route1')}}"><i class="fa fa-circle-o"></i> Route 1</a></li>
+                        <li class="route2"><a href="{{Route('route2')}}"><i class="fa fa-circle-o"></i> Route 2</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="forms treeview">
                     <a href="#">
                         <i class="fa fa-edit"></i> <span>Forms</span>
                         <span class="pull-right-container">
@@ -339,9 +341,9 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                        <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                        <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+                        <li class="route3"><a href="{{Route('route3')}}"><i class="fa fa-circle-o"></i> Route 3</a></li>
+                        <li class="route4"><a href="{{Route('route4')}}"><i class="fa fa-circle-o"></i> Route 4</a></li>
+                        <li class="route5"><a href="{{Route('route5')}}"><i class="fa fa-circle-o"></i> Route 5</a></li>
                     </ul>
                 </li>
 
@@ -384,9 +386,8 @@
 <!-- AdminLTE App -->
 <script src="{{asset('lib/adminLTE/adminlte.min.js')}}"></script>
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/toastr.min.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 
 @yield('propre-script')
 <!-- pour afficher les msg de toastr -->
