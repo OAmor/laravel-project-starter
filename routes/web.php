@@ -33,5 +33,9 @@ Route::get('/barcode', function (){
     return $pdf->stream('test.pdf');
 });
 
+Route::get('/test', function (){
+    return view('barcode');
+});
+
 
 //Route::get('/home', 'HomeController@index')->name('home');

@@ -1,3 +1,9 @@
+/* Global */
+
+.content-wrapper{
+    margin-top: -20px;
+    min-height: 500px !important;
+}
 
 
 /* Acceuil Style */
