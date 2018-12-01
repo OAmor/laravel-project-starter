@@ -22,21 +22,6 @@ Route::get('/home', [
     'as' => 'home'
 ]);
 
-Route::get('/produit/creation', [
-    'uses' => 'ProductController@create',
-    'as' => 'product.create'
-]);
-
-Route::get('/barcode', function (){
-    $pdf = App::make('dompdf.wrapper');
-    $pdf->loadHTML(DNS1D::getBarcodeHTML("4445", "UPCA"))->setPaper('a5','portrait');
-    return $pdf->stream('test.pdf');
-});
-
-Route::get('/test', function (){
-    return view('barcode');
-});
-
 Route::get('/route1', function (){
     return view('route1');
 })->name('route1');
